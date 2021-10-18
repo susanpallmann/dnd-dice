@@ -45,36 +45,38 @@ function clearWaitingArea() {
 }
 
 function displayDice(LMAO) {
-  clearWaitingArea();
-  for (var i = 0; i < LMAO.length; i++) {
-    $('#waiting').append('<span class="visual-dice ' + LMAO[i][2] + '">' + LMAO[i][2] + '</span>');
-  }
+clearWaitingArea();
+    for (var i = 0; i < LMAO.length; i++) {
+        $('#waiting').append('<span class="visual-dice ' + LMAO[i][2] + '">' + LMAO[i][2] + '</span>');
+    }
 }
 
-$('#clear').click(function(event) {
-  clearWaitingArea();
-  RemoveDice();
-});
+$('document').ready(function () {
+    $('#clear').click(function(event) {
+        clearWaitingArea();
+        RemoveDice();
+    });
 
-$('#roll').click(function(event) {
-  rollDice();
-});
+    $('#roll').click(function(event) {
+        rollDice();
+    });
 
-$('buttons').on('click', '.button', function() {
-  if ($(this).is("#d4")) {
-    AddDice(d4);
-  } else if ($(this).is("#d6")) {
-    AddDice(d6);
-  } else if ($(this).is("#d8")) {
-    AddDice(d8);
-  } else if ($(this).is("#d10")) {
-    AddDice(d10);
-  } else if ($(this).is("#d12")) {
-    AddDice(d12);
-  } else if ($(this).is("#d20")) {
-    AddDice(d20);
-  } else if ($(this).is("#dp")) {
-    AddDice(dp);
-  }
-  displayDice(dice);
+    $('buttons').on('click', '.button', function() {
+        if ($(this).is("#d4")) {
+            AddDice(d4);
+        } else if ($(this).is("#d6")) {
+            AddDice(d6);
+        } else if ($(this).is("#d8")) {
+            AddDice(d8);
+        } else if ($(this).is("#d10")) {
+            AddDice(d10);
+        } else if ($(this).is("#d12")) {
+            AddDice(d12);
+        } else if ($(this).is("#d20")) {
+            AddDice(d20);
+        } else if ($(this).is("#dp")) {
+            AddDice(dp);
+        }
+        displayDice(dice);
+    });
 });
