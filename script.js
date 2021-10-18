@@ -61,7 +61,7 @@ $('document').ready(function () {
         rollDice();
     });
 
-    $('buttons').on('click', '.button', function() {
+    $('#buttons').on('click', '.button', function() {
         if ($(this).is("#d4")) {
             AddDice(d4);
         } else if ($(this).is("#d6")) {
