@@ -6,4 +6,4 @@ View [Live Website](https://susanpallmann.github.io/dnd-dice/)
 
 **Background:**
 
-This project was started to introduce a friend to JavaScript... which explains some of the interesting variable name choices.
+This project was started to introduce a friend to JavaScript... which explains some of the interesting variable name choices. ;)
